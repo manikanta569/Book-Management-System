@@ -1,5 +1,5 @@
 package com.bookmanagementsystem.model;
 
-public class Books {
+public class Role {
 
 }
