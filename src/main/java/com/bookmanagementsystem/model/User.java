@@ -16,15 +16,19 @@ public class User {
 	@Column(unique = true)
 	private String Email;
 	private String Password;
+	private int PhoneNumber;
 //	private String Role;
 	private LocalDateTime CreatedAt;
 	private LocalDateTime UpdatedAt;
-	public User(Long id, String name, String email, String password, LocalDateTime createdAt, LocalDateTime updatedAt) {
+	
+	public User(Long id, String name, String email, String password, int phoneNumber, LocalDateTime createdAt,
+			LocalDateTime updatedAt) {
 		super();
 		Id = id;
 		Name = name;
 		Email = email;
 		Password = password;
+		PhoneNumber = phoneNumber;
 		CreatedAt = createdAt;
 		UpdatedAt = updatedAt;
 	}
@@ -63,6 +67,12 @@ public class User {
 	}
 	public void setUpdatedAt(LocalDateTime updatedAt) {
 		UpdatedAt = updatedAt;
+	}
+	public int getPhoneNumber() {
+		return PhoneNumber;
+	}
+	public void setPhoneNumber(int phoneNumber) {
+		PhoneNumber = phoneNumber;
 	}
 	
 	
